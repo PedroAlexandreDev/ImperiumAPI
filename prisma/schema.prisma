@@ -47,6 +47,7 @@ model Building {
   level      Int       @default(1)
   empire     Empire    @relation(fields: [empireId], references: [id])
   empireId   String
+  price Int
 
   startedAt  DateTime?
   finishedAt DateTime?
