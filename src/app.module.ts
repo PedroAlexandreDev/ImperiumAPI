@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
-import { EmpireController } from './empire/empire.controller';
+import { DatabaseModule } from './database/database.module';
 import { EmpireModule } from './empire/empire.module';
 import { ArmyModule } from './army/army.module';
 import { ResourcesModule } from './resources/resources.module';
@@ -13,7 +13,7 @@ import { EmpireService } from './empire/empire.service';
 import { EmpireController } from './empire/empire.controller';
 
 @Module({
-  imports: [AuthModule, ResourcesModule, BuildingsModule, ArmyModule, EmpireModule],
+  imports: [AuthModule, ResourcesModule, BuildingsModule, ArmyModule, EmpireModule, DatabaseModule],
   controllers: [AppController, EmpireController, ArmyController],
   providers: [AppService, ArmyService, EmpireService],
 })
