@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "ImperiumApi",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
