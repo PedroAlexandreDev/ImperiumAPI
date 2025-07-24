@@ -2,7 +2,6 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
-import { EmpireController } from './empire/empire.controller';
 import { EmpireModule } from './empire/empire.module';
 import { ArmyModule } from './army/army.module';
 import { ResourcesModule } from './resources/resources.module';
