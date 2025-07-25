@@ -25,6 +25,7 @@ CREATE TABLE "Building" (
     "type" TEXT NOT NULL,
     "level" INTEGER NOT NULL DEFAULT 1,
     "empireId" TEXT NOT NULL,
+    "price" INTEGER NOT NULL,
     "startedAt" DATETIME,
     "finishedAt" DATETIME,
     "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
