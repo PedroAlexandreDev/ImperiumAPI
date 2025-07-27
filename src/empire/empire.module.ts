@@ -6,7 +6,7 @@ import { DatabaseModule } from 'src/database/database.module';
 @Module({
     imports: [DatabaseModule],
     providers: [EmpireService],
-    controllers: [EmpireController]
+    controllers: [EmpireController],
 })
 
 export class EmpireModule {}

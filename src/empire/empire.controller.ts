@@ -11,12 +11,12 @@ export class EmpireController {
 
     @Get()
     async getEmpires(
-        @Request() req
+        @Request() req,
     ) {
 
         const userId = req.user.userId;
 
-        return this.empiresService.getAllEmpires(userId)
+        return this.empiresService.getEmpires(userId)
 
     }
 

@@ -28,7 +28,7 @@ model User {
 
 model Empire {
   id          String        @id @default(cuid())
-  name        String
+  name        String @unique
   user        User          @relation(fields: [userId], references: [id])
   userId      String @unique
   coins Int @default(10000)

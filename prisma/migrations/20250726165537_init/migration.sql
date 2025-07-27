@@ -64,4 +64,7 @@ CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
 CREATE UNIQUE INDEX "User_password_key" ON "User"("password");
 
 -- CreateIndex
+CREATE UNIQUE INDEX "Empire_name_key" ON "Empire"("name");
+
+-- CreateIndex
 CREATE UNIQUE INDEX "Empire_userId_key" ON "Empire"("userId");
