@@ -25,6 +25,7 @@ CREATE TABLE "Building" (
     "type" TEXT NOT NULL,
     "level" INTEGER NOT NULL DEFAULT 1,
     "empireId" TEXT NOT NULL,
+    "price" INTEGER NOT NULL,
     "startedAt" DATETIME,
     "finishedAt" DATETIME,
     "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -61,6 +62,9 @@ CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "User_password_key" ON "User"("password");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Empire_name_key" ON "Empire"("name");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Empire_userId_key" ON "Empire"("userId");
