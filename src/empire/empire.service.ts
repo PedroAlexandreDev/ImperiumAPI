@@ -46,8 +46,18 @@ export class EmpireService {
           { empireId: empire.id, type: "GOLD", amount: 0 },
         ],
       });
+
+      await this.prismaService.building.createMany({
+        data: [
+          { empireId: empire.id, type: "FARM", level:  0},
+          { empireId: empire.id, type: "MINE", level:  0},
+          { empireId: empire.id, type: "WALL", level: 0 },
+          { empireId: empire.id, type: "BARRACKS", level: 0 },
+        ],
+      });
     
       return empire;
+      
     }
     
 }

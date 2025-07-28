@@ -1,12 +1,12 @@
 meta {
-  name: get impires
+  name: buy buildings
   type: http
-  seq: 3
+  seq: 8
 }
 
-get {
-  url: http://localhost:3000/empire
-  body: json
+post {
+  url: http://localhost:3000/buildings/morroDoGleber/FARM
+  body: multipartForm
   auth: bearer
 }
 
