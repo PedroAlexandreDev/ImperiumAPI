@@ -1,8 +1,8 @@
-# 🏛️ ImperiumAPI
+# ImperiumAPI
 
 **ImperiumAPI** é uma API REST para um jogo de estratégia onde os jogadores constroem e expandem seus próprios impérios. Gerencie recursos, desenvolva construções, treine exércitos, entre em guerra e negocie com outros jogadores.
 
-> 🚧 **Versão 0.1 em desenvolvimento** — implementando as rotas iniciais e estrutura base
+> **Versão 0.1 em desenvolvimento** — implementando as rotas iniciais e estrutura base
 
 
 ## 🧱 Banco de Dados (via Prisma)
@@ -15,8 +15,8 @@ Estrutura inicial dos modelos:
 * `Building`: Níveis de construções
 * `Army`: Tropas treinadas e status militar
 
-> 🔄 Atualmente utilizando **SQLite** para desenvolvimento local
-> 🔜 Em breve será migrado para **PostgreSQL** para produção
+> Atualmente utilizando **SQLite** para desenvolvimento local
+> Em breve será migrado para **PostgreSQL** para produção
 
 ---
 
@@ -30,7 +30,7 @@ Estrutura inicial dos modelos:
 
 ---
 
-## 🚀 Rodando o projeto localmente
+## Rodando o projeto localmente
 
 ```bash
 # Clone o repositório
