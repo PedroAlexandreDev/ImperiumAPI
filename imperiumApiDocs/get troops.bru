@@ -1,0 +1,19 @@
+meta {
+  name: get troops
+  type: http
+  seq: 9
+}
+
+get {
+  url: http://localhost:3000/troops/morroDoGleber
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbWRxNDgweTYwMDAwaTB2NjZub2xmaXB4IiwidXNlcm5hbWUiOiJyb25hbGRvRG9zSW1wZXJpb3MiLCJlbWFpbCI6IjEyMTIxMjEyQGdtYWlsLmNvbSIsImlhdCI6MTc1Mzg4ODk5OSwiZXhwIjoxNzU2NDgwOTk5fQ.Bgr3klrg0bN9m4-322i3Ay4m1b4baz4aRKHWKVQYCyQ
+}
+
+settings {
+  encodeUrl: true
+}

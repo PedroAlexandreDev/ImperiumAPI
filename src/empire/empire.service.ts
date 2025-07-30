@@ -55,6 +55,14 @@ export class EmpireService {
           { empireId: empire.id, type: "BARRACKS", level: 0 },
         ],
       });
+
+      await this.prismaService.troop.createMany({
+        data: [
+          { empireId: empire.id, type: "ARCHER", amount:  0},
+          { empireId: empire.id, type: "CAVALRY", amount:  0},
+          { empireId: empire.id, type: "INFANTRY", amount: 0 },
+        ],
+      });
     
       return empire;
       
