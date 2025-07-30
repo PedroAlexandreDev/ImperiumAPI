@@ -5,7 +5,7 @@
 > **Versão 0.1 em desenvolvimento** — implementando as rotas iniciais e estrutura base
 
 
-## 🧱 Banco de Dados (via Prisma)
+## Banco de Dados (via Prisma)
 
 Estrutura inicial dos modelos:
 
