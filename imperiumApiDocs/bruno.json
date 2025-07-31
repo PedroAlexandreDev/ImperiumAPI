@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "name": "ImperiumApi",
+  "name": "imperiumApiDocs",
   "type": "collection",
   "ignore": [
     "node_modules",

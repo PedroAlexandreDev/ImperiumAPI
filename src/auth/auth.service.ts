@@ -1,4 +1,4 @@
-import { Injectable, UnauthorizedException } from '@nestjs/common';
+import { BadRequestException, Injectable, UnauthorizedException } from '@nestjs/common';
 import { PrismaService } from 'src/database/prisma.service';
 import { RegisterDto } from './dtos/auth.register';
 import * as bcrypt from "bcrypt"
@@ -16,6 +16,14 @@ export class AuthService {
 
         const hashPassword = bcrypt.hashSync(password, 10)
 
+        const existingUser = await this.prismaService.user.findUnique({
+            where: { email },
+          });
+          
+          if (existingUser) {
+            throw new BadRequestException('Usuário já existe');
+          }
+
         return this.prismaService.user.create({
             data: {
                 username: username,
@@ -30,9 +38,15 @@ export class AuthService {
 
         const {email, password} = loginDto;
 
-        const user = await this.prismaService.user.findUnique({where: {
-            email: email
-        }})
+        const user = await this.prismaService.user.upsert({
+            where: { email },
+            update: {}, // nada a atualizar se já existir
+            create: {
+              email,
+              password: await bcrypt.hash(password, 10),
+              username: email.split('@')[0], // ou qualquer outro padrão
+            }
+          });
 
         if (!user || !user.password) {
             throw new UnauthorizedException('Usuário não encontrado ou senha ausente');

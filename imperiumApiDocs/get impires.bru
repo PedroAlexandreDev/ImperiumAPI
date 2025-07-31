@@ -1,0 +1,15 @@
+meta {
+  name: get impires
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:3000/empire
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbWRuM2lwa2cwMDAwaTBzaWF6M3g3eXo0IiwidXNlcm5hbWUiOiJyb25hbGRvRG9zSW1wZXJpb3MiLCJlbWFpbCI6IjEyMTIxMjEyQGdtYWlsLmNvbSIsImlhdCI6MTc1MzcwNjQzNywiZXhwIjoxNzU2Mjk4NDM3fQ.DZxmi2eFHpUkRiBQgEH9dv8fKOv-LPK8mR2SyJqHjqE
+}

@@ -1,0 +1,15 @@
+meta {
+  name: collect resources
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:3000/resources/morroDoGleber/collect
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbWRrYXE3bHowMDAwaTBtbGVxNDR1Z3plIiwidXNlcm5hbWUiOiJyb25hbGRvRG9zSW1wZXJpb3MiLCJlbWFpbCI6IjEyMTIxMjEyQGdtYWlsLmNvbSIsImlhdCI6MTc1MzUzODM0MCwiZXhwIjoxNzU2MTMwMzQwfQ.qjXiA_x23mSgMXiYaPvS292E43U1KhHEDWfTa0J_dPA
+}

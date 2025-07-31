@@ -28,7 +28,7 @@ model User {
 
 model Empire {
   id          String        @id @default(cuid())
-  name        String
+  name        String @unique
   user        User          @relation(fields: [userId], references: [id])
   userId      String @unique
   coins Int @default(10000)
@@ -47,6 +47,7 @@ model Building {
   level      Int       @default(1)
   empire     Empire    @relation(fields: [empireId], references: [id])
   empireId   String
+  price Int  @default(0)
 
   startedAt  DateTime?
   finishedAt DateTime?
