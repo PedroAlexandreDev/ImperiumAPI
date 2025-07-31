@@ -20,10 +20,11 @@ export class BuildingsService {
     if (!empire) {
         throw new NotFoundException("Império não encontrado");
     }
+    
     return this.prismaService.building.findMany({
         where: {
 
-            empireId: empire.id
+          empireId: empire.id
 
         }
     })
